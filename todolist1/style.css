@@ -1,0 +1,117 @@
+body {
+    
+    margin: 0;
+    background-image: url("IMG_8286.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    background-image: url(1.jpg); /* 원하는 이미지 경로 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px; /* 박스 둥글게 */
+    padding: 20px; /* 내부 여백 */
+    background-color: white;
+    min-height: 400px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px,  rgba(0, 0, 0, 0.3) 0px 10px 30px; /* 그림자 추가 */;
+}
+button {
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    color: white;
+    padding: 6px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task:hover {
+    transform: scale(1.05); /* 마우스 올리면 확대 */
+}
+
+.task-area {
+    max-height: 300px; 
+    overflow-y: auto; 
+    padding: 10px;
+
+}
+
+ #task-board {/*리스트를 세로 정렬 */
+    display: flex;
+    flex-direction: column; /* 리스트가 위아래로 정렬됨 */
+    gap: 10px; /* 리스트 간격 */
+}
+.task-tabs {
+    max-height: 300px; 
+    overflow-y: auto; /* 리스트가 많아지면 스크롤 */
+    padding: 10px;
+}
+
+#under-line{
+    height: 4px;
+    background-color:lightgreen;
+    position:absolute;
+    width: 60px;
+    bottom: 0px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+}
+.task-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    position: relative; /* underline 위치 고정 */
+}
+
+.task-tabs div {
+    position: relative; /* underline을 탭 글자 밑에 정확히 위치시키기 위해 필요 */
+    padding-bottom: 5px; /*  글자와 밑줄 간 간격 조정 */
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px; /* 둥글게 */
+    margin-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+}
+.task-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.active {
+    font-weight: bold;
+    color: #ff758c;
+}
+.deleted-area {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px dashed aqua red;
+}
+
+.deleted-task {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+    opacity: 0.7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
