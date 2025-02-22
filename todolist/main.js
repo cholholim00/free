@@ -17,18 +17,23 @@ window.onload = function () {
 };
 
 addButton.addEventListener("click",addTask);
+taskInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") { // 엔터 키 감지
+        addTask();
+    }
+});
 taskTabs.forEach((tab) => {
     tab.addEventListener("click", changeTab);
 });
 
 function addTask() {
     let taskContent = taskInput.value.trim();
-    if (!taskContent) return; // 빈 값 방지하기 위해(공백 입력 차단)
+    if (!taskContent) 
+        alert("할 일을 입력해주세요!!"); //경고 메세지 출력
+        return; // 빈 값 방지하기 위해(공백 입력 차단)
 
     let task = { text: taskContent, image: "./고양이.png", isCompleted: false };
-    if(!taskInput.value,trim()) {
-        alert("할 일을 입력해주세요!!")
-    }
+    
     taskList.push(task);
     taskInput.value = ""; //입력 필드를 초기화한다
     render();
