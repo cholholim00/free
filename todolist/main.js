@@ -26,6 +26,9 @@ function addTask() {
     if (!taskContent) return; // 빈 값 방지하기 위해(공백 입력 차단)
 
     let task = { text: taskContent, image: "./고양이.png", isCompleted: false };
+    if(!taskInput.value,trim()) {
+        alert("할 일을 입력해주세요!!")
+    }
     taskList.push(task);
     taskInput.value = ""; //입력 필드를 초기화한다
     render();
