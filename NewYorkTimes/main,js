@@ -1,0 +1,8 @@
+const API_KEY = `73014994bd1943d29b4deae2f5e5a166`;
+const getLatestNews = () => {
+const url = new URL(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
+const response = fetch(url)
+};
+
+
+getLatestNews();
