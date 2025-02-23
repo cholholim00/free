@@ -28,10 +28,10 @@ taskTabs.forEach((tab) => {
 
 function addTask() {
     let taskContent = taskInput.value.trim();
-    if (!taskContent) 
+    if (!taskContent) {
         alert("할 일을 입력해주세요!!"); //경고 메세지 출력
         return; // 빈 값 방지하기 위해(공백 입력 차단)
-
+    }
     let task = { text: taskContent, image: "./고양이.png", isCompleted: false };
     
     taskList.push(task);
